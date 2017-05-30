@@ -1,0 +1,8 @@
+{
+  "name": "php-io-message-system",
+  "version": "0.0.1",
+  "description": "socket.io backend for php-io",
+  "dependencies": {
+    "socket.io": "^2.0.1"
+  }
+}
