@@ -9,12 +9,14 @@
         var url = location.origin + ':8080' + '/';
         var socket = io(url);
         $(document).ready(function(){
-            socket.on('test', function(){
-                console.log('test');
+            socket.on('test', function(data){
+                console.log(data);
             });
             $('button').click(function(){
-                //TODO: send through ajax to php
-                socket.emit('test', {test: 666});
+                $.ajax({
+                    url: '/test.php',
+                    data: {clientId: socket.id}
+                });
             });
         });
     </script>
